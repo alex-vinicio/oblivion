@@ -128,7 +128,7 @@
       <a href="index3.html" class="brand-link">
         <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">Olivion</span>
+        <span class="brand-text font-weight-light">Oblivion</span>
       </a>
   
       <!-- Sidebar -->
@@ -141,47 +141,40 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
-            <li class="nav-item has-treeview menu-open">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Dashboard
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="./index.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v1</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index2.html" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v2</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index3.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v3</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-           
-          
-        
-           
-     
-     
-           
-           
-          
          
-          
-           
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-home"></i>
+                <p>FINCAS</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-user"></i>
+                <p>TECNICOS</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tree"></i>
+                <p>MONITOREO</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-file"></i>
+                <p>INFORME MENSUAL</p>
+              </a>
+            </li>
+
+            <li class="nav-item has-treeview menu-open">
+         
+            </li>
+            
             
           </ul>
         </nav>
@@ -197,7 +190,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Dashboard v2</h1>
+            
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -213,7 +206,47 @@
       <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
-         
+          <div class="row" style="padding-left: 30%;">
+            <div class="col-6">
+              <div class="card card-info">
+                <div class="card-header">
+                  <h3 class="card-title">Ingreso de personal técnico</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Cédula</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Cédula">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Nombre Completos</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nombres Completos">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Correo</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Correo">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Teléfono</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Cargo</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Cargo">
+                    </div>
+                    
+                  </div>
+                  <!-- /.card-body -->
+    
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-info">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
          
         </div><!--/. container-fluid -->
       </section>
@@ -229,12 +262,13 @@
   
     <!-- Main Footer -->
     <footer class="main-footer">
-      <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-      All rights reserved.
+      <strong>Copyright &copy; 2020-2021</strong>
+      Oblivion
       <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.0.0
+        <b>Version</b> 1.0.0
       </div>
     </footer>
   </div>
 
 <router-outlet></router-outlet>
+
