@@ -25,8 +25,6 @@ public class PropietarioService {
 	@Autowired
 	PropietarioRepository repo;
 
-	@Autowired
-	ValidarCedula ciValdiar;
 
 	public List<Propietario> getAll(){
 		List<Propietario> propietarioList = repo.findAll();
@@ -37,7 +35,7 @@ public class PropietarioService {
 		}
 	}
      		
-	public Propietario findByCiPropietario(Long ciPropietario) throws RecordNotFoundException{
+	public Propietario findByCiPropietario(String ciPropietario) throws RecordNotFoundException{
 		Optional<Propietario> propietario = repo.findByCiPropietario(ciPropietario);
 		if(propietario.isPresent()) {
 			return propietario.get();
@@ -47,11 +45,12 @@ public class PropietarioService {
 	}
 
 	public Propietario createPropietario(Propietario propietario) throws RecordNotFoundException{
-		if(ciValdiar.ingresoDataCedula(propietario.getCelularPropietario()) == true){
+		/*if(ciValdiar.ingresoDataCedula(propietario.getCelularPropietario()) == true){
 			return repo.save(propietario);
 		}else{
 			throw new RecordNotFoundException("Numero de cedula incorrecta!"); 
-		}
+		}*/
+		return repo.save(propietario);
 		
 	}
 
@@ -65,7 +64,7 @@ public class PropietarioService {
 		}
 	}
 
-	public void deletePropietarioByCiPropietario(Long ciPropietario) throws RecordNotFoundException{
+	public void deletePropietarioByCiPropietario(String ciPropietario) throws RecordNotFoundException{
 		Optional<Propietario> propietario = repo.findByCiPropietario(ciPropietario);
 		if(propietario.isPresent()) {
 		repo.deleteByCiPropietario(ciPropietario);

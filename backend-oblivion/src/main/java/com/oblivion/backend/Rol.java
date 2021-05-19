@@ -3,7 +3,7 @@
 |
 | CRUDyLeaf	- A Domain Specific Language for generating Spring Boot 
 |			REST resources from entity CRUD operations.
-| Author: Omar S. Gómez (2020)
+| Author: Omar S. Gï¿½mez (2020)
 | File Date: Wed May 19 13:39:30 ECT 2021
 | 
  -------------------------------------------------------------------
@@ -16,7 +16,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 	
 @Entity
-@Table(name = "rol_table")
+@Table(name = "Rol")
 public class Rol {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

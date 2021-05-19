@@ -39,7 +39,7 @@ public class UsuarioController {
 	}
 
 	@GetMapping("/usuario/{id}")
-	public ResponseEntity<Usuario> getUsuarioByCedulaUsuario(@PathVariable("id") Long cedulaUsuario) throws RecordNotFoundException {
+	public ResponseEntity<Usuario> getUsuarioByCedulaUsuario(@PathVariable("id") String cedulaUsuario) throws RecordNotFoundException {
 		Usuario entity = service.findByCedulaUsuario(cedulaUsuario);
 		return new ResponseEntity<Usuario>(entity, new HttpHeaders(), HttpStatus.OK);
 	}
@@ -59,7 +59,7 @@ public class UsuarioController {
 	}
 
 	@DeleteMapping("/usuario/{id}")
-	public HttpStatus deleteUsuarioByCedulaUsuario(@PathVariable("id") Long cedulaUsuario) throws RecordNotFoundException {
+	public HttpStatus deleteUsuarioByCedulaUsuario(@PathVariable("id") String cedulaUsuario) throws RecordNotFoundException {
 		service.deleteUsuarioByCedulaUsuario(cedulaUsuario);
 		return HttpStatus.OK;
 	}

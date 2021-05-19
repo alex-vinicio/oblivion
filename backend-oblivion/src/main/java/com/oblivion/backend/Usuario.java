@@ -3,7 +3,7 @@
 |
 | CRUDyLeaf	- A Domain Specific Language for generating Spring Boot 
 |			REST resources from entity CRUD operations.
-| Author: Omar S. Gómez (2020)
+| Author: Omar S. Gï¿½mez (2020)
 | File Date: Wed May 19 13:39:30 ECT 2021
 | 
  -------------------------------------------------------------------
@@ -16,73 +16,61 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 	
 @Entity
-@Table(name = "usuario_table")
+@Table(name = "Usuario")
 public class Usuario {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long cedulaUsuario;
+	private String cedulaUsuario;
 	
 	private Long idRol;
 	private String nombreUsuario;
 	private String correoUsuario;
 	private String contrasenaUsuario;
 	private String telefonoUsuario;
-	private String estadoUsuario;
+	private Boolean estadoUsuario;
 	
-	public Long getCedulaUsuario() {
+	public String getCedulaUsuario() {
 		return cedulaUsuario;
 	}
-	
-	public void setCedulaUsuario(Long cedulaUsuario) {
+	public void setCedulaUsuario(String cedulaUsuario) {
 		this.cedulaUsuario = cedulaUsuario;
 	}
-	
 	public Long getIdRol() {
 		return idRol;
 	}
-	
 	public void setIdRol(Long idRol) {
 		this.idRol = idRol;
 	}
-	
 	public String getNombreUsuario() {
 		return nombreUsuario;
 	}
-	
 	public void setNombreUsuario(String nombreUsuario) {
 		this.nombreUsuario = nombreUsuario;
 	}
-	
 	public String getCorreoUsuario() {
 		return correoUsuario;
 	}
-	
 	public void setCorreoUsuario(String correoUsuario) {
 		this.correoUsuario = correoUsuario;
 	}
-	
 	public String getContrasenaUsuario() {
 		return contrasenaUsuario;
 	}
-	
 	public void setContrasenaUsuario(String contrasenaUsuario) {
 		this.contrasenaUsuario = contrasenaUsuario;
 	}
-	
 	public String getTelefonoUsuario() {
 		return telefonoUsuario;
 	}
-	
 	public void setTelefonoUsuario(String telefonoUsuario) {
 		this.telefonoUsuario = telefonoUsuario;
 	}
-	
-	public String getEstadoUsuario() {
+	public Boolean getEstadoUsuario() {
 		return estadoUsuario;
 	}
-	
-	public void setEstadoUsuario(String estadoUsuario) {
+	public void setEstadoUsuario(Boolean estadoUsuario) {
 		this.estadoUsuario = estadoUsuario;
 	}
+	
+	
 	
 }

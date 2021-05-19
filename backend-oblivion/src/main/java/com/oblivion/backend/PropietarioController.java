@@ -39,7 +39,7 @@ public class PropietarioController {
 	}
 
 	@GetMapping("/propietario/{id}")
-	public ResponseEntity<Propietario> getPropietarioByCiPropietario(@PathVariable("id") Long ciPropietario) throws RecordNotFoundException {
+	public ResponseEntity<Propietario> getPropietarioByCiPropietario(@PathVariable("id") String ciPropietario) throws RecordNotFoundException {
 		Propietario entity = service.findByCiPropietario(ciPropietario);
 		return new ResponseEntity<Propietario>(entity, new HttpHeaders(), HttpStatus.OK);
 	}
@@ -59,7 +59,7 @@ public class PropietarioController {
 	}
 
 	@DeleteMapping("/propietario/{id}")
-	public HttpStatus deletePropietarioByCiPropietario(@PathVariable("id") Long ciPropietario) throws RecordNotFoundException {
+	public HttpStatus deletePropietarioByCiPropietario(@PathVariable("id") String ciPropietario) throws RecordNotFoundException {
 		service.deletePropietarioByCiPropietario(ciPropietario);
 		return HttpStatus.OK;
 	}

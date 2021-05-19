@@ -18,19 +18,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 	
 @Entity
-@Table(name = "propietario_table")
+@Table(name = "Propietario")
 public class Propietario {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long ciPropietario;
+	private String ciPropietario;
 	
 	private String celularPropietario;
 	private Date fechaUpdatePropietario;
 	private Boolean estadoPropietario;
-	public Long getCiPropietario() {
+	public String getCiPropietario() {
 		return ciPropietario;
 	}
-	public void setCiPropietario(Long ciPropietario) {
+	public void setCiPropietario(String ciPropietario) {
 		this.ciPropietario = ciPropietario;
 	}
 	public String getCelularPropietario() {
