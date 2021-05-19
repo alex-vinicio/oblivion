@@ -3,12 +3,14 @@
 |
 | CRUDyLeaf	- A Domain Specific Language for generating Spring Boot 
 |			REST resources from entity CRUD operations.
-| Author: Omar S. Gómez (2020)
+| Author: Omar S. Gï¿½mez (2020)
 | File Date: Wed May 19 13:39:30 ECT 2021
 | 
  -------------------------------------------------------------------
 																*/
 package com.oblivion.backend;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;	
@@ -27,62 +29,50 @@ public class Monitoreo {
 	private Long fruto;
 	private Long incidencia;
 	private Long severidad;
-	private String fechaMonitoreo;
-	
+	private Date fechaMonitoreo;
 	public Long getIdMonitoreo() {
 		return idMonitoreo;
 	}
-	
 	public void setIdMonitoreo(Long idMonitoreo) {
 		this.idMonitoreo = idMonitoreo;
 	}
-	
 	public Long getIdCultivo() {
 		return idCultivo;
 	}
-	
 	public void setIdCultivo(Long idCultivo) {
 		this.idCultivo = idCultivo;
 	}
-	
 	public Long getArbol() {
 		return arbol;
 	}
-	
 	public void setArbol(Long arbol) {
 		this.arbol = arbol;
 	}
-	
 	public Long getFruto() {
 		return fruto;
 	}
-	
 	public void setFruto(Long fruto) {
 		this.fruto = fruto;
 	}
-	
 	public Long getIncidencia() {
 		return incidencia;
 	}
-	
 	public void setIncidencia(Long incidencia) {
 		this.incidencia = incidencia;
 	}
-	
 	public Long getSeveridad() {
 		return severidad;
 	}
-	
 	public void setSeveridad(Long severidad) {
 		this.severidad = severidad;
 	}
-	
-	public String getFechaMonitoreo() {
+	public Date getFechaMonitoreo() {
 		return fechaMonitoreo;
 	}
-	
-	public void setFechaMonitoreo(String fechaMonitoreo) {
+	public void setFechaMonitoreo(Date fechaMonitoreo) {
 		this.fechaMonitoreo = fechaMonitoreo;
 	}
+	
+	
 	
 }

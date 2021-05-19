@@ -3,7 +3,7 @@
 |
 | CRUDyLeaf	- A Domain Specific Language for generating Spring Boot 
 |			REST resources from entity CRUD operations.
-| Author: Omar S. Gómez (2020)
+| Author: Omar S. Gï¿½mez (2020)
 | File Date: Wed May 19 13:39:30 ECT 2021
 | 
  -------------------------------------------------------------------
@@ -22,40 +22,34 @@ public class Cultivo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idCultivo;
 	
-	private String estadoCultivo;
+	private Boolean estadoCultivo;
 	private String nombreCultivo;
 	private String densidadSiembraCultivo;
-	
 	public Long getIdCultivo() {
 		return idCultivo;
 	}
-	
 	public void setIdCultivo(Long idCultivo) {
 		this.idCultivo = idCultivo;
 	}
-	
-	public String getEstadoCultivo() {
+	public Boolean getEstadoCultivo() {
 		return estadoCultivo;
 	}
-	
-	public void setEstadoCultivo(String estadoCultivo) {
+	public void setEstadoCultivo(Boolean estadoCultivo) {
 		this.estadoCultivo = estadoCultivo;
 	}
-	
 	public String getNombreCultivo() {
 		return nombreCultivo;
 	}
-	
 	public void setNombreCultivo(String nombreCultivo) {
 		this.nombreCultivo = nombreCultivo;
 	}
-	
 	public String getDensidadSiembraCultivo() {
 		return densidadSiembraCultivo;
 	}
-	
 	public void setDensidadSiembraCultivo(String densidadSiembraCultivo) {
 		this.densidadSiembraCultivo = densidadSiembraCultivo;
 	}
 	
+	
+
 }
