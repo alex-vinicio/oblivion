@@ -25,8 +25,6 @@ public class UsuarioService {
 	@Autowired
 	UsuarioRepository repo;
 
-	@Autowired
-	ValidarCedula ciValdiar;
 
 	public List<Usuario> getAll(){
 		List<Usuario> usuarioList = repo.findAll();
@@ -37,7 +35,7 @@ public class UsuarioService {
 		}
 	}
      		
-	public Usuario findByCedulaUsuario(Long cedulaUsuario) throws RecordNotFoundException{
+	public Usuario findByCedulaUsuario(String cedulaUsuario) throws RecordNotFoundException{
 		Optional<Usuario> usuario = repo.findByCedulaUsuario(cedulaUsuario);
 		if(usuario.isPresent()) {
 			return usuario.get();
@@ -67,7 +65,7 @@ public class UsuarioService {
 		}
 	}
 
-	public void deleteUsuarioByCedulaUsuario(Long cedulaUsuario) throws RecordNotFoundException{
+	public void deleteUsuarioByCedulaUsuario(String cedulaUsuario) throws RecordNotFoundException{
 		Optional<Usuario> usuario = repo.findByCedulaUsuario(cedulaUsuario);
 		if(usuario.isPresent()) {
 		repo.deleteByCedulaUsuario(cedulaUsuario);

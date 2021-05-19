@@ -16,7 +16,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 	
 @Entity
-@Table(name = "cultivo_table")
+@Table(name = "Cultivo")
 public class Cultivo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

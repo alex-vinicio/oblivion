@@ -19,7 +19,7 @@ drop table if exists USUARIO;
 /*==============================================================*/
 create table CULTIVO
 (
-   ID_CULTIVO           bigint not null,
+   ID_CULTIVO           bigint(20) unsigned not null,
    ESTADO_CULTIVO       bit,
    NOMBRE_CULTIVO       varchar(10),
    DENSIDAD_SIEMBRA_CULTIVO varchar(7),
@@ -31,7 +31,7 @@ create table CULTIVO
 /*==============================================================*/
 create table FINCA
 (
-   ID_FINCA             bigint not null,
+   ID_FINCA             bigint(20) unsigned not null,
    ID_LUGAR             int,
    CI_PROPIETARIO       varchar(10),
    CEDULA_USUARIO       varchar(10),
@@ -49,8 +49,8 @@ create table FINCA
 /*==============================================================*/
 create table FINCA_CULTIVO
 (
-   ID_FINCA             bigint not null,
-   ID_CULTIVO           bigint not null,
+   ID_FINCA             bigint(20) unsigned not null,
+   ID_CULTIVO           bigint(20) unsigned not null,
    primary key (ID_FINCA, ID_CULTIVO)
 );
 
@@ -59,7 +59,7 @@ create table FINCA_CULTIVO
 /*==============================================================*/
 create table LUGAR
 (
-   ID_LUGAR             bigint not null,
+   ID_LUGAR             bigint(20) unsigned not null,
    NOMBRE_LUGAR         varchar(30),
    primary key (ID_LUGAR)
 );
@@ -69,7 +69,7 @@ create table LUGAR
 /*==============================================================*/
 create table MONITOREO
 (
-   ID_MONITOREO         bigint not null,
+   ID_MONITOREO         bigint(20) unsigned not null,
    ID_CULTIVO           int,
    ARBOL                int,
    FRUTO                int,
@@ -96,7 +96,7 @@ create table PROPIETARIO
 /*==============================================================*/
 create table ROL
 (
-   ID_ROL               bigint not null,
+   ID_ROL               bigint(20) unsigned not null,
    NOMBRE_ROL           varchar(15),
    DESCRIPCION_ROL      varchar(30),
    primary key (ID_ROL)
