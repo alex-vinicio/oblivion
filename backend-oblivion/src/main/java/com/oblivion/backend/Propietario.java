@@ -3,12 +3,14 @@
 |
 | CRUDyLeaf	- A Domain Specific Language for generating Spring Boot 
 |			REST resources from entity CRUD operations.
-| Author: Omar S. Gómez (2020)
+| Author: Omar S. Gï¿½mez (2020)
 | File Date: Wed May 19 13:39:30 ECT 2021
 | 
  -------------------------------------------------------------------
 																*/
 package com.oblivion.backend;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;	
@@ -23,39 +25,33 @@ public class Propietario {
 	private Long ciPropietario;
 	
 	private String celularPropietario;
-	private String fechaUpdatePropietario;
-	private String estadoPropietario;
-	
+	private Date fechaUpdatePropietario;
+	private Boolean estadoPropietario;
 	public Long getCiPropietario() {
 		return ciPropietario;
 	}
-	
 	public void setCiPropietario(Long ciPropietario) {
 		this.ciPropietario = ciPropietario;
 	}
-	
 	public String getCelularPropietario() {
 		return celularPropietario;
 	}
-	
 	public void setCelularPropietario(String celularPropietario) {
 		this.celularPropietario = celularPropietario;
 	}
-	
-	public String getFechaUpdatePropietario() {
+	public Date getFechaUpdatePropietario() {
 		return fechaUpdatePropietario;
 	}
-	
-	public void setFechaUpdatePropietario(String fechaUpdatePropietario) {
+	public void setFechaUpdatePropietario(Date fechaUpdatePropietario) {
 		this.fechaUpdatePropietario = fechaUpdatePropietario;
 	}
-	
-	public String getEstadoPropietario() {
+	public Boolean getEstadoPropietario() {
 		return estadoPropietario;
 	}
-	
-	public void setEstadoPropietario(String estadoPropietario) {
+	public void setEstadoPropietario(Boolean estadoPropietario) {
 		this.estadoPropietario = estadoPropietario;
 	}
+	
+	
 	
 }

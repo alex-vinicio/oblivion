@@ -3,7 +3,7 @@
 |
 | CRUDyLeaf	- A Domain Specific Language for generating Spring Boot 
 |			REST resources from entity CRUD operations.
-| Author: Omar S. Gómez (2020)
+| Author: Omar S. Gï¿½mez (2020)
 | File Date: Wed May 19 13:39:30 ECT 2021
 | 
  -------------------------------------------------------------------
@@ -25,6 +25,9 @@ public class PropietarioService {
 	@Autowired
 	PropietarioRepository repo;
 
+	@Autowired
+	ValidarCedula ciValdiar;
+
 	public List<Propietario> getAll(){
 		List<Propietario> propietarioList = repo.findAll();
 		if(propietarioList.size() > 0) {
@@ -43,8 +46,13 @@ public class PropietarioService {
 		}
 	}
 
-	public Propietario createPropietario(Propietario propietario){
-		return repo.save(propietario);
+	public Propietario createPropietario(Propietario propietario) throws RecordNotFoundException{
+		if(ciValdiar.ingresoDataCedula(propietario.getCelularPropietario()) == true){
+			return repo.save(propietario);
+		}else{
+			throw new RecordNotFoundException("Numero de cedula incorrecta!"); 
+		}
+		
 	}
 
 	public Propietario updatePropietario(Propietario propietario) throws RecordNotFoundException {

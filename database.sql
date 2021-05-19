@@ -19,8 +19,8 @@ drop table if exists USUARIO;
 /*==============================================================*/
 create table CULTIVO
 (
-   ID_CULTIVO           int not null,
-   ESTADO_CULTIVO       boolean,
+   ID_CULTIVO           bigint not null,
+   ESTADO_CULTIVO       bit,
    NOMBRE_CULTIVO       varchar(10),
    DENSIDAD_SIEMBRA_CULTIVO varchar(7),
    primary key (ID_CULTIVO)
@@ -31,7 +31,7 @@ create table CULTIVO
 /*==============================================================*/
 create table FINCA
 (
-   ID_FINCA             int not null,
+   ID_FINCA             bigint not null,
    ID_LUGAR             int,
    CI_PROPIETARIO       varchar(10),
    CEDULA_USUARIO       varchar(10),
@@ -39,7 +39,7 @@ create table FINCA
    COORDENADA_X_FINCA   varchar(10),
    COORDENADA_Y_FINCA   varchar(10),
    COORDENADA_Z_FINCA   varchar(10),
-   ESTADO_FINCA         boolean,
+   ESTADO_FINCA         bit,
    FECHA_UPDATE_FINCA   datetime,
    primary key (ID_FINCA)
 );
@@ -49,8 +49,8 @@ create table FINCA
 /*==============================================================*/
 create table FINCA_CULTIVO
 (
-   ID_FINCA             int not null,
-   ID_CULTIVO           int not null,
+   ID_FINCA             bigint not null,
+   ID_CULTIVO           bigint not null,
    primary key (ID_FINCA, ID_CULTIVO)
 );
 
@@ -59,7 +59,7 @@ create table FINCA_CULTIVO
 /*==============================================================*/
 create table LUGAR
 (
-   ID_LUGAR             int not null,
+   ID_LUGAR             bigint not null,
    NOMBRE_LUGAR         varchar(30),
    primary key (ID_LUGAR)
 );
@@ -69,7 +69,7 @@ create table LUGAR
 /*==============================================================*/
 create table MONITOREO
 (
-   ID_MONITOREO         int not null,
+   ID_MONITOREO         bigint not null,
    ID_CULTIVO           int,
    ARBOL                int,
    FRUTO                int,
@@ -87,7 +87,7 @@ create table PROPIETARIO
    CI_PROPIETARIO       varchar(10) not null,
    CELULAR_PROPIETARIO  varchar(10),
    FECHA_UPDATE_PROPIETARIO datetime,
-   ESTADO_PROPIETARIO   boolean,
+   ESTADO_PROPIETARIO   bit,
    primary key (CI_PROPIETARIO)
 );
 
@@ -96,7 +96,7 @@ create table PROPIETARIO
 /*==============================================================*/
 create table ROL
 (
-   ID_ROL               int not null,
+   ID_ROL               bigint not null,
    NOMBRE_ROL           varchar(15),
    DESCRIPCION_ROL      varchar(30),
    primary key (ID_ROL)
@@ -114,7 +114,7 @@ create table USUARIO
    CONTRASENA_USUARIO   varchar(32),
    CARGO_USUARIO        varchar(10),
    TELEFONO_USUARIO     varchar(10),
-   ESTADO_USUARIO       boolean,
+   ESTADO_USUARIO       bit,
    primary key (CEDULA_USUARIO)
 );
 

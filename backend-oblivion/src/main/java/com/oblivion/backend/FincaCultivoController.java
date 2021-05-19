@@ -3,7 +3,7 @@
 |
 | CRUDyLeaf	- A Domain Specific Language for generating Spring Boot 
 |			REST resources from entity CRUD operations.
-| Author: Omar S. Gómez (2020)
+| Author: Omar S. Gï¿½mez (2020)
 | File Date: Wed May 19 13:39:30 ECT 2021
 | 
  -------------------------------------------------------------------
@@ -46,13 +46,13 @@ public class FincaCultivoController {
 
 
 
-	@PostMapping("/fincaCultivo")
+	@PostMapping("/fincaCultivo/nuevo")
 	public ResponseEntity<FincaCultivo> createFincaCultivo(@RequestBody FincaCultivo fincaCultivo){
 		service.createFincaCultivo(fincaCultivo);
 		return new ResponseEntity<FincaCultivo>(fincaCultivo, new HttpHeaders(), HttpStatus.OK);
 	}
 
-	@PutMapping("/fincaCultivo")
+	@PutMapping("/fincaCultivo/midificar")
 	public ResponseEntity<FincaCultivo> updateFincaCultivo(@RequestBody FincaCultivo fincaCultivo) throws RecordNotFoundException{
 		service.updateFincaCultivo(fincaCultivo);
 		return new ResponseEntity<FincaCultivo>(fincaCultivo, new HttpHeaders(), HttpStatus.OK);
